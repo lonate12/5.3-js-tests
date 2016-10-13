@@ -34,7 +34,7 @@ PostView.prototype.showPosts = function(posts){
   posts.forEach(function(post){
     $('.posts').append('<li><h1>' + post.title + '</h1><p>' + post.body + '</p></li>');
   });
-}
+};
 
 module.exports = {
   'PostView': PostView
@@ -45,7 +45,7 @@ module.exports = {
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<form class=\"\" action=\"index.html\" method=\"post\">\n  <input type=\"text\" name=\"name\" value=\"\" id=\"inputTitle\">\n  <input type=\"textarea\" name=\"name\" value=\"\" id=\"inputBody\">\n  <input type=\"button\" name=\"name\" value=\"\" id=\"btn\">\n</form>\n";
+    return "<form class=\"form\" action=\"index.html\" method=\"post\">\n  <input type=\"text\" name=\"name\" value=\"\" id=\"inputTitle\">\n  <input type=\"textarea\" name=\"name\" value=\"\" id=\"inputBody\">\n  <input type=\"button\" name=\"name\" value=\"\" id=\"btn\">\n</form>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":60}],4:[function(require,module,exports){

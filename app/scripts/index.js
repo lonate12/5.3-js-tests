@@ -11,3 +11,10 @@ $(function(){
 
   models.Post.fetch();
 });
+
+$('.form').on('submit', createPostForm);
+
+function createPostForm(post){
+  $(document).trigger('create:post', [post]);
+  console.log(post);
+}
