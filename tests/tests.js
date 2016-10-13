@@ -60,8 +60,9 @@ describe("PostView", function(){
 });
 
 describe("createPostForm", function(){
-  it("should trigger a creast:post event on the document with the title and body", function(){
-    $(document).on("create:post", function(event, posts){
+  it("should trigger a creast:post event on the document with the title and body", function(done){
+    require('../app/scripts/index');
+    $(document).on("create:post", function(event, post){
       expect(post).to.have.property('title');
       expect(post).to.have.property('body');
       done();

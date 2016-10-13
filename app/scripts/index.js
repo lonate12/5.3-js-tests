@@ -12,9 +12,7 @@ $(function(){
   models.Post.fetch();
 });
 
-$('.form').on('submit', createPostForm);
-
-function createPostForm(post){
-  $(document).trigger('create:post', [post]);
-  console.log(post);
-}
+$('.form').on('submit', function(event){
+  event.preventDefault();
+  $(document).trigger('create:post', [{title: 'Cool', body: 'Cool'}]);
+});
